@@ -2,16 +2,46 @@ extends templates/template1
 
 block navigasi
   a(class='item primary-color',href='/',style='color:#AB2531;')
-    | Beranda
+    .text
+      | Beranda
   a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
+    .text
       | Kelompok TA
   .right.menu
     a(class='item grey-text',href='#')
-      i.alarm.outline.icon.medium
+      i.alarm.outline.icon.medium.grey-text
     a.item.ui.dropdown
-      .text
+      .text.grey-text
         | username
       i.dropdown.icon
       .menu
-        .item Profil
-        .item Keluar
+        .item
+          i.setting.icon.grey-text
+          span.grey-text Pengaturan
+        .item
+          i.sign.out.icon.grey-text
+          span.grey-text Keluar
+
+block main-middle
+  .ui.segment.grey-text(align='center')
+    i.info.icon
+    | Informasi
+  .ui.segment.grey-text(align='center')
+    | info satu
+  .ui.segment.grey-text(align='center')
+    | info dua
+
+block right-middle
+  .ui.card
+    .image
+      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+    .content
+      a.header username
+      .meta
+        span.date Nama Lengkap
+      .description
+        | Deskripsi
+    .extra.content
+      a
+        i.setting.icon
+        | Pengaturan

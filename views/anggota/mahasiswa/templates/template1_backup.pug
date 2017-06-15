@@ -36,9 +36,25 @@ html(lang='en')
                     i.user.icon
                     | Portofolio
           .eight.wide.column
-            block main-middle
+            .ui.segment
+              .ui.form
+                .field
+                  label Tulis kegiatan anda
+                  textarea(rows='2',style='resize:none;')
           .column
-            block right-middle
+            .ui.card
+              .image
+                img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+              .content
+                a.header Kristy
+                .meta
+                  span.date Joined in 2013
+                .description
+                  | Kristy is an art director living in New York.
+              .extra.content
+                a
+                  i.user.icon
+                  |       22 Friends
 
 
       footer.grey-text(align='center')= copyright
