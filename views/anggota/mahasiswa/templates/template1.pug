@@ -1,0 +1,53 @@
+doctype html
+html(lang='en')
+  head
+    title TADJ | #{title}
+    link(rel='shortcut icon', href='/images/shortcut-icon.png')
+    link(rel='stylesheet', href='/semanticUI/semantic.css')
+    link(rel='stylesheet', href='/stylesheets/custom-grid.css')
+    link(rel='stylesheet', href='/stylesheets/slick.css')
+    link(rel='stylesheet', href='/stylesheets/slick-theme.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='/javascripts/slick.min.js')
+    script(src='/javascripts/angular.min.js')
+    script(src='/semanticUI/semantic.min.js')
+  body
+    section.ui.container
+      nav.ui.secondary.pointing.menu
+        block navigasi
+      main
+        .ui.equal.width.grid
+          .column
+            .ui.segment
+              .ui.middle.aligned.divided.list
+                .item(style='padding:1em;')
+                  .content
+                    a(href='#')
+                      i.newspaper.icon
+                      | Blog
+                .item(style='padding:1em;')
+                  .content
+                    a(href='#')
+                      i.talk.outline.icon
+                      | Forum
+                .item(style='padding:1em;')
+                  .content
+                  a(href='#')
+                    i.user.icon
+                    | Portofolio
+                .item(style='padding:1em;')
+                  .content
+                    a(href='#')
+                      i.book.icon
+                      | Panduan
+          .eight.wide.column
+            .ui.segment
+              | 2
+          .column
+            .ui.segment
+              | 3
+
+      footer.grey-text(align='center')= copyright
+    script.
+      $('.ui.dropdown')
+        .dropdown()
