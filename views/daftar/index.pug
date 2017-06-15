@@ -1,0 +1,31 @@
+extends ../templates/public-putih
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    | Halaman Awal
+  a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
+      | Lihat Judul
+  .right.menu
+    a(class='item grey-text',href='/tentang')
+      aside(class='grey-text') Tentang
+    a(class='item grey-text',href='/panduan')
+      aside(class='grey-text') Panduan
+    a(class='item grey-text',href='/daftar')
+      aside(class='primary-color') Daftar
+
+block content
+  .seven.wide.column.grey-text(align='center')
+    h3 Mahasiswa
+    p.text-justify
+      | Mulai pengerjaan Tugas Akhir sebagai mahasiswa. Setelah mengisi form pendaftaran diharuskan melakukan unggah Kartu Tanda Mahasiswa Institutsi Pendidikan yang dipilih untuk proses pemeriksaan.
+    a.big.ui.button(href='/daftar/mahasiswa',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;')
+      | Mulai
+  .two.wide.column.grey-text(align='center')
+    .ui.vertical.divider
+      i.circle.thin.icon
+  .seven.wide.column.grey-text(align='center')
+    h3 Dosen
+    p.text-justify
+      | Mulai kegiatan seputar Tugas Akhir sebagai dosen. Setelah mengisi form pendaftaran diharuskan melakukan unggah Kartu Tanda Pengajar Institusi Pendidikan yang dipilih untuk proses pemeriksaan.
+    a.big.ui.button(href='/daftar/dosen',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+      | Mulai

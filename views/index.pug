@@ -1,5 +1,35 @@
-extends layout
+extends templates/public
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#AB2531;')
+    | Halaman Awal
+  a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
+      | Lihat Judul
+  .right.menu
+    a(class='item grey-text',href='/tentang')
+      aside(class='grey-text') Tentang
+    a(class='item grey-text',href='/panduan')
+      aside(class='grey-text') Panduan
+    a(class='item grey-text',href='/daftar')
+      aside(class='grey-text') Daftar
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .six.wide.column.white-text
+    h1 Selamat Datang
+    p Ayo masuk untuk lanjutkan tugas akhir mu!
+    form(class='ui form',method='post',action='/masuk')
+      div(class='required field')
+        input(type='text',placeholder='Email',ng-model='inputUsername',name='email')
+      div(class='required field')
+        input(type='password',placeholder='Sandi',ng-model='inputPassword',name='password')
+      div(class='required field')
+        button(type='submit',class='huge ui button button-submit',style='background: linear-gradient(to bottom, rgba(73,155,234,1) 0%, rgba(6,77,153,1) 100%);color:#FFFFFF;') Kirim
+        a(href='/daftar',class='white-text') Belum punya akun? Daftar disini
+  .ten.wide.column(align='center')
+    article(class='carousel-introduction')
+      div
+        | Ambil kelompok
+      div
+        | Bidding
+      div
+        | Bimbingan
