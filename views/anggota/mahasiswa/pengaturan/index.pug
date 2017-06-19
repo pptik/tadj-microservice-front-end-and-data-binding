@@ -1,4 +1,4 @@
-extends templates/template1
+extends ../templates/template1
 
 block navigasi
   a(class='item primary-color',href='/',style='color:#AB2531;')
@@ -15,21 +15,35 @@ block navigasi
         | username
       i.dropdown.icon
       .menu
-        .item.nav-pengaturan
+        .item
           i.setting.icon.grey-text
           span.grey-text Pengaturan
-        .item.nav-keluar
+        .item
           i.sign.out.icon.grey-text
           span.grey-text Keluar
 
 block main-middle
   .ui.segment.grey-text(align='center')
-    i.info.icon
-    | Informasi
+    i.setting.icon
+    | Pengaturan
   .ui.segment.grey-text
-    | info satu
+    .ui.grid
+      .three.wide.column
+        br
+        i.university.icon.huge
+      .threeten.wide.column
+        h3 Akademik
+        p Mengatur asal Universitas, Unggah KTM untuk konfirmasi, dll.
+        a(href='/pengaturan/akademik') Lanjutkan
   .ui.segment.grey-text
-    | info dua
+    .ui.grid
+      .three.wide.column
+        br
+        i.user.icon.huge
+      .threeten.wide.column
+        h3 Profil
+        p Mengatur nama depan, nama belakang, foto profil, dan deskripsi.
+        a(href='/pengaturan/profil') Lanjutkan
 
 block right-middle
   .ui.card
@@ -42,6 +56,6 @@ block right-middle
       .description
         | Deskripsi
     .extra.content
-      a(href='/pengaturan')
+      a
         i.setting.icon
         | Pengaturan

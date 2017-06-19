@@ -40,8 +40,33 @@ html(lang='en')
           .column
             block right-middle
 
-
+      br
       footer.grey-text(align='center')= copyright
+      block modal
     script.
-      $('.ui.dropdown')
-        .dropdown()
+      $('.ui.dropdown').dropdown()
+      $('.nav-pengaturan').click(function(){
+        document.location.href = '/pengaturan'
+      })
+      $('.nav-keluar').click(function(){
+        alert('keluar')
+      })
+      $('.ui.accordion').accordion()
+
+      $('#tambah-institusi').click(function(){
+        $('.ui.modal.tambah-institusi')
+          .modal('show')
+          .modal({
+                  blurring: true,
+                  closable : true
+                })
+      })
+
+      $('.ubah-data-akademik').click(function(){
+        $('.ui.modal.ubah-institusi')
+          .modal('show')
+          .modal({
+                  blurring: true,
+                  closable : true
+                })
+      })
