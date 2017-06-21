@@ -3,8 +3,8 @@ extends templates/template1
 block navigasi
   a(class='item primary-color',href='/',style='color:#AB2531;')
     .text
-      | Beranda
-  a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
+      | Dashboard
+  a(class='item primary-color',href='/kelompok',style='color:#777777;')
     .text
       | Kelompok TA
   .right.menu
@@ -23,7 +23,7 @@ block navigasi
           span.grey-text Keluar
 
 block main-middle
-  .ui.segment.grey-text(align='center')
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
     i.info.icon
     | Informasi
   .ui.segment.grey-text

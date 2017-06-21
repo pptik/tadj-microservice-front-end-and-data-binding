@@ -1,10 +1,10 @@
 extends ../templates/template1
 
 block navigasi
-  a(class='item primary-color',href='/',style='color:#AB2531;')
+  a(class='item primary-color',href='/',style='color:#777777;')
     .text
       | Dashboard
-  a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
+  a(class='item primary-color',href='/kelompok',style='color:#AB2531;')
     .text
       | Kelompok TA
   .right.menu
@@ -15,35 +15,27 @@ block navigasi
         | username
       i.dropdown.icon
       .menu
-        .item
+        .item.nav-pengaturan
           i.setting.icon.grey-text
           span.grey-text Pengaturan
-        .item
+        .item.nav-keluar
           i.sign.out.icon.grey-text
           span.grey-text Keluar
 
 block main-middle
   .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
-    i.setting.icon
-    | Pengaturan
+    i.users.icon
+    | Kelompok
   .ui.segment.grey-text
-    .ui.grid
-      .three.wide.column
-        br
-        i.university.icon.huge
-      .threeten.wide.column
-        h3 Akademik
-        p Mengatur asal Universitas, Unggah KTM untuk konfirmasi, dll.
-        a(href='/pengaturan/akademik') Lanjutkan
-  .ui.segment.grey-text
-    .ui.grid
-      .three.wide.column
-        br
-        i.user.icon.huge
-      .threeten.wide.column
-        h3 Profil
-        p Mengatur nama depan, nama belakang, foto profil, dan deskripsi.
-        a(href='/pengaturan/profil') Lanjutkan
+    //Kondisi ketika sudah memiliki kelompok
+    p Pilih Kelompok
+      .ui.relaxed.divided.list
+          .item(style='padding:1em;')
+            .content
+              a(href='/mahasiswa/kelompok/detail') 1. TA171801001
+          .item(style='padding:1em;')
+            .content
+              a(href='/mahasiswa/kelompok/detail')  2. TA171801002
 
 block right-middle
   .ui.card
@@ -56,6 +48,6 @@ block right-middle
       .description
         | Deskripsi
     .extra.content
-      a
+      a(href='/pengaturan')
         i.setting.icon
         | Pengaturan

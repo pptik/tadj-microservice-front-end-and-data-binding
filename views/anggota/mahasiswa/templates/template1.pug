@@ -23,6 +23,11 @@ html(lang='en')
                 .item(style='padding:1em;')
                   .content
                     a.grey-text(href='#')
+                      i.write.icon
+                      | Blog
+                .item(style='padding:1em;')
+                  .content
+                    a.grey-text(href='#')
                       i.talk.outline.icon
                       | Forum
                 .item(style='padding:1em;')
@@ -64,6 +69,24 @@ html(lang='en')
 
       $('.ubah-data-akademik').click(function(){
         $('.ui.modal.ubah-institusi')
+          .modal('show')
+          .modal({
+                  blurring: true,
+                  closable : true
+                })
+      })
+
+      $('#ubah-poster').click(function(){
+        $('.ui.modal.ubah-poster')
+          .modal('show')
+          .modal({
+                  blurring: true,
+                  closable : true
+                })
+      })
+
+      $('#ubah-video').click(function(){
+        $('.ui.modal.ubah-video')
           .modal('show')
           .modal({
                   blurring: true,

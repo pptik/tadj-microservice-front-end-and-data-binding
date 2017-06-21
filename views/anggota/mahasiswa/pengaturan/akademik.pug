@@ -3,7 +3,7 @@ extends ../templates/template1
 block navigasi
   a(class='item primary-color',href='/',style='color:#AB2531;')
     .text
-      | Beranda
+      | Dashboard
   a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
     .text
       | Kelompok TA
@@ -15,15 +15,15 @@ block navigasi
         | username
       i.dropdown.icon
       .menu
-        .item
+        .item.nav-pengaturan
           i.setting.icon.grey-text
           span.grey-text Pengaturan
-        .item
+        .item.nav-keluar
           i.sign.out.icon.grey-text
           span.grey-text Keluar
 
 block main-middle
-  .ui.segment.grey-text(align='center')
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
     i.university.icon
     | Pengaturan Akademik
   .ui.segment.grey-text
@@ -136,7 +136,7 @@ block right-middle
       .description
         | Deskripsi
     .extra.content
-      a
+      a(href='/pengaturan')
         i.setting.icon
         | Pengaturan
 
