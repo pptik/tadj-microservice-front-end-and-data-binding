@@ -28,6 +28,10 @@ exports.pilih_kelompok = function(req, res) {
     return res.render('anggota/mahasiswa/kelompok/pilih_kelompok', { title: 'Pilih Kelompok', copyright: copyright })
 }
 
+exports.tambah_kelompok = function(req, res) {
+    return res.render('anggota/mahasiswa/kelompok/tambah', { title: 'Tambah Kelompok', copyright: copyright })
+}
+
 exports.kelompok_detail = function(req, res) {
     return res.render('anggota/mahasiswa/kelompok/detail', { title: 'Detail Kelompok', copyright: copyright })
 }

@@ -40,12 +40,14 @@ block main-middle
     .ui.grid
       .sixteen.wide.column(align='center')
         h5 Video
-        video(controls)
+        video(controls,width='300',height:'250',)
           source(src='https://www.w3schools.com/html/mov_bbb.mp4',type='video/mp4')
         br
         a.ui.button#ubah-video(style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;',href='#')
           i.icon.write
           |   Ubah Video
+    
+
 
 block right-middle
   .ui.card
