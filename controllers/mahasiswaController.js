@@ -43,3 +43,7 @@ exports.bimbingan = function(req, res) {
 exports.postervideo = function(req, res) {
     return res.render('anggota/mahasiswa/kelompok/postervideo', { title: 'Poster dan Video', copyright: copyright })
 }
+
+exports.ambil_judul = function(req, res) {
+    return res.render('anggota/mahasiswa/kelompok/ambil_judul', { title: 'Ambil Judul Tugas Akhir', copyright: copyright })
+}

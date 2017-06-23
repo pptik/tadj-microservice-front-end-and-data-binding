@@ -67,21 +67,30 @@ block main-middle
     i.sticky.note.icon
     | Tugas Akhir
   .ui.segment.grey-text
+
+    //Kondisi belum memiliki judul tugas akhir
+    a.ui.button(style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;',href='/mahasiswa/kelompok/ambil_judul')
+      i.icon.add
+      |   Ambil Judul Tugas Akhir
+
     //Kondisi ketika sudah memiliki judul tugas akhir
-    b Judul
-    br
-    br
-    p Tugas Akhir Dalam Jaringan
-    br
-    b Aksi
-    br
-    .ui.divided.items
-      .item
-        a.ui.button(href='/mahasiswa/kelompok/bimbingan',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;width:100%;')
-          | Bimbingan
-      .item
-        a.ui.button(href='/mahasiswa/kelompok/postervideo',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;width:100%;')
-          | Poster dan Video
+    //-
+      b Judul
+      br
+      br
+      p Tugas Akhir Dalam Jaringan
+      br
+      b Aksi
+      br
+      .ui.divided.items
+        .item
+          a.ui.button(href='/mahasiswa/kelompok/bimbingan',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;width:100%;')
+            | Bimbingan
+        .item
+          a.ui.button(href='/mahasiswa/kelompok/postervideo',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;width:100%;')
+            | Poster dan Video
+
+
 
 block right-middle
   .ui.card
