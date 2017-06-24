@@ -83,3 +83,7 @@ exports.panduan_univ_3 = function (req, res) {
 exports.panduan_univ_4 = function (req, res) {
     return res.render('panduan/univ/4')
 }
+
+exports.bagikan_kelompok = function (req, res) {
+    return res.render('anggota/mahasiswa/kelompok/bagikan', { title: 'TA0000000', copyright: copyright })    
+}
