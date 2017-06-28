@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    title TADJ | #{title}
+    link(rel='shortcut icon', href='/images/shortcut-icon.png')
+    link(rel='stylesheet', href='/semanticUI/semantic.css')
+    link(rel='stylesheet', href='/stylesheets/custom-grid.css')
+    link(rel='stylesheet', href='/stylesheets/slick.css')
+    link(rel='stylesheet', href='/stylesheets/slick-theme.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='/javascripts/slick.min.js')
+    script(src='/javascripts/angular.min.js')
+    script(src='/semanticUI/semantic.min.js')
+  body
+    section.ui.container(style='margin: 1em 0 0 0')
+      main
+        .ui.equal.width.grid
+          .sixteen.wide.column
+            block main
+      br
+      footer.grey-text(align='center')= copyright
+      block modal
+    script.
+      $('.ui.dropdown').dropdown()
+
+      $('.ui.accordion').accordion()

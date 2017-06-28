@@ -85,5 +85,9 @@ exports.panduan_univ_4 = function (req, res) {
 }
 
 exports.bagikan_kelompok = function (req, res) {
-    return res.render('anggota/mahasiswa/kelompok/bagikan', { title: 'TA0000000', copyright: copyright })    
+    return res.render('anggota/mahasiswa/kelompok/bagikan', { title: 'TA0000000', copyright: copyright })
+}
+
+exports.public_profil = function (req, res) {
+    return res.render('public_profil', { title: 'Username', copyright: copyright })
 }

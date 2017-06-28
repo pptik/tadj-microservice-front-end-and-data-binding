@@ -25,39 +25,42 @@ block navigasi
 block main-middle
   .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
     i.user.icon
-    | Pengaturan Profil
+    | Ubah Data Profil
+
   .ui.segment.grey-text
-    span(style='float:right')
-      a(href='/profil/username',target='_blank')
-        i.share.icon
-        | Bagikan profil ke publik
-    .ui.grid(style='padding:0 1em 1em 1em;')
-      .ui.relaxed.list
-        .item
-          i.mail.icon
-          .content
-            a.grey-text Email
-            .description me@email.com
-        .item
-          i.child.icon
-          .content
-            a.grey-text Username
-            .description emilhamep
-        .item
-          i.user.icon
-          .content
-            a.grey-text Nama Depan
-            .description John
-        .item
-          i.user.icon
-          .content
-            a.grey-text Nama Belakang
-            .description Doe
-        br
-        .item
-          a.ui.button(style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;',href='/pengaturan/profil/ubah')
-            i.icon.write
-            |   Ubah Data Profil
+    .ui.grid(style='padding:1em;')
+      .ui.form(style='width:100%')
+        .field
+          label Nama Depan
+          input(type='text', name='first-name', placeholder='Tulis Nama Depan')
+        .field
+          label Nama Belakang
+          input(type='text', name='first-name', placeholder='Tulis Nama Belakang')
+        .field
+          label Bio
+          textarea(rows='3',style='resize:none;')
+        .field
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim
+
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.unlock.alternate.icon
+    | Ubah Sandi
+
+  .ui.segment.grey-text
+    .ui.grid(style='padding:1em;')
+      .ui.form(style='width:100%')
+        .field
+          label Sandi Sekarang
+          input(type='password', name='first-name', placeholder='Tulis Sandi Sekarang')
+        .field
+          label Sandi Sekarang
+          input(type='password', name='first-name', placeholder='Tulis Sandi Baru')
+        .field
+          label Nama Belakang
+          input(type='password', name='first-name', placeholder='Tulis Ulang Sandi Baru')
+
+        .field
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim
 
 
 block right-middle
