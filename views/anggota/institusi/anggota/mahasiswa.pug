@@ -1,10 +1,10 @@
-extends templates/template1
+extends ../templates/template1
 
 block navigasi
-  a(class='item primary-color',href='/',style='color:#AB2531;')
+  a(class='item primary-color',href='/',style='color:#777777;')
     .text
       | Dashboard
-  a(class='item primary-color',href='/institusi/anggota',style='color:#777777;')
+  a(class='item primary-color',href='/anggota',style='color:#AB2531;')
     .text
       | Anggota
   a(class='item primary-color',href='/judul',style='color:#777777;')
@@ -30,12 +30,44 @@ block navigasi
 
 block main-middle
   .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
-    i.info.icon
-    | Informasi
-  .ui.segment.grey-text
-    | info satu
-  .ui.segment.grey-text
-    | info dua
+    i.users.icon
+    | Mahasiswa
+
+  .ui.top.attached.tabular.menu
+    a.item.active(data-tab='first') Daftar Semua Mahasiswa
+    a.item(data-tab='second') Menunggu Konfirmasi
+
+  .ui.bottom.attached.tab.segment.active(data-tab='first')
+    table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+      thead
+        tr
+          th No
+          th Nama
+          th Username
+          th KTM
+      tbody
+        tr
+          td -
+          td -
+          td -
+          td -
+
+
+  .ui.bottom.attached.tab.segment(data-tab='second')
+    table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+      thead
+        tr
+          th No
+          th Nama
+          th KTM
+          th Aksi
+      tbody
+        tr
+          td -
+          td -
+          td -
+          td Terima|Tolak
+
 
 block right-middle
   .ui.card

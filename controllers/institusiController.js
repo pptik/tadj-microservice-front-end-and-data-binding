@@ -15,3 +15,15 @@ exports.pengaturan_akademik = function(req, res) {
 exports.pengaturan_profil = function(req, res) {
     return res.render('anggota/institusi/pengaturan/profil', { title: 'Pengaturan Profil', copyright: copyright })
 }
+
+exports.anggota = function(req, res) {
+    return res.render('anggota/institusi/anggota/index', { title: 'Anggota', copyright: copyright })
+}
+
+exports.anggota_mahasiswa = function(req, res) {
+    return res.render('anggota/institusi/anggota/mahasiswa', { title: 'Anggota Mahasiswa', copyright: copyright })
+}
+
+exports.anggota_dosen = function(req, res) {
+    return res.render('anggota/institusi/anggota/dosen', { title: 'Anggota Dosen', copyright: copyright })
+}
