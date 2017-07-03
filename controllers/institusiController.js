@@ -27,3 +27,7 @@ exports.anggota_mahasiswa = function(req, res) {
 exports.anggota_dosen = function(req, res) {
     return res.render('anggota/institusi/anggota/dosen', { title: 'Anggota Dosen', copyright: copyright })
 }
+
+exports.kelompok = function(req, res) {
+    return res.render('anggota/institusi/kelompok/index', { title: 'Kelompok', copyright: copyright })
+}
