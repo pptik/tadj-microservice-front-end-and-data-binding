@@ -4,6 +4,18 @@ exports.dashboard = function(req, res) {
     return res.render('anggota/institusi/dashboard', { title: 'Dashboard', copyright: copyright })
 }
 
+exports.judul = function(req, res) {
+    return res.render('anggota/institusi/judul/index', { title: 'Judul TA', copyright: copyright })
+}
+
+exports.judul_daftar = function(req, res) {
+    return res.render('anggota/institusi/judul/daftar', { title: 'Daftar Judul TA', copyright: copyright })
+}
+
+exports.judul_pengajuan = function(req, res) {
+    return res.render('anggota/institusi/judul/pengajuan', { title: 'Pengajuan Judul TA', copyright: copyright })
+}
+
 exports.pengaturan = function(req, res) {
     return res.render('anggota/institusi/pengaturan/index', { title: 'Pengaturan', copyright: copyright })
 }

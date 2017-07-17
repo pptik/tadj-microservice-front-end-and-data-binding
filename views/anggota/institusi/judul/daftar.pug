@@ -1,0 +1,137 @@
+extends ../templates/template1
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    .text
+      | Dashboard
+  a(class='item primary-color',href='/institusi/anggota',style='color:#AB2531;')
+    .text
+      | Anggota
+  a(class='item primary-color',href='/institusi/judul',style='color:#777777;')
+    .text
+      | Judul TA
+  a(class='item primary-color',href='/institusi/kelompok',style='color:#777777;')
+    .text
+      | Kelompok TA
+  .right.menu
+    a(class='item grey-text',href='#')
+      i.alarm.outline.icon.medium.grey-text
+    a.item.ui.dropdown
+      .text.grey-text
+        | username
+      i.dropdown.icon
+      .menu
+        .item.nav-pengaturan
+          i.setting.icon.grey-text
+          span.grey-text Pengaturan
+        .item.nav-keluar
+          i.sign.out.icon.grey-text
+          span.grey-text Keluar
+
+block main-middle
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.list.layout.icon
+    | Daftar Judul TA
+  .ui.segment.grey-text
+    br
+    .ui.grid(style='padding:0 1em 1em 1em;')
+      .sixteen.wide.column
+        br
+        table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+          thead
+            tr
+              th No
+              th Judul
+              th Jenjang
+              th Aksi
+          tbody
+            tr
+              td 1
+              td BITS: Sistem Manajemen On-Street ParkingBITS: Sistem Manajemen On-Street ParkingBITS: Sistem Manajemen On-Street Parking
+              td S1
+              td
+                a(href='#') Detail
+                br
+                br
+                a(href='#') Aksi
+
+
+block right-middle
+  .ui.card
+    .image
+      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+    .content
+      a.header username
+      .meta
+        span.date Nama Lengkap
+      .description
+        | Deskripsi
+    .extra.content
+      a(href='/pengaturan')
+        i.setting.icon
+        | Pengaturan
+
+block modal
+  .ui.modal.tambah-institusi
+    i.close.icon
+    .header Tambah Institusi Pendidikan
+    .content
+      .ui.form
+        .field
+          label Institusi Pendidikan
+          select.ui.dropdown
+            option(value='') Pilih Institusi Pendidikan
+            option(value='1') Universitas Indonesia
+            option(value='0') Universitas Gajah Mada
+        .field
+          label Jenjang
+          select.ui.dropdown
+            option(value='') Pilih Jenjang
+            option(value='1') S1
+            option(value='0') S2
+        .field
+          label Prodi
+          select.ui.dropdown
+            option(value='') Pilih Prodi
+            option(value='1') Teknik Kelautan
+            option(value='0') Teknik Perminyakan
+        .field
+          label NIM
+          input(type='text', name='first-name', placeholder='Tuliskan NIM')
+        .field
+          label Foto KTM (Kartu Tanda Mahasiswa)
+          input(type='file', name='first-name')
+        .field
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim
+
+  .ui.modal.ubah-institusi
+    i.close.icon
+    .header Ubah Data Institusi Pendidikan
+    .content
+      .ui.form
+        .field
+          label Institusi Pendidikan
+          select.ui.dropdown
+            option(value='') Pilih Institusi Pendidikan
+            option(value='1') Universitas Indonesia
+            option(value='0') Universitas Gajah Mada
+        .field
+          label Jenjang
+          select.ui.dropdown
+            option(value='') Pilih Jenjang
+            option(value='1') S1
+            option(value='0') S2
+        .field
+          label Prodi
+          select.ui.dropdown
+            option(value='') Pilih Prodi
+            option(value='1') Teknik Kelautan
+            option(value='0') Teknik Perminyakan
+        .field
+          label NIM
+          input(type='text', name='first-name', placeholder='Tuliskan NIM')
+        .field
+          label Foto KTM (Kartu Tanda Mahasiswa)
+          input(type='file', name='first-name')
+        .field
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim
