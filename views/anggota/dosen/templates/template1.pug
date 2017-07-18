@@ -29,7 +29,7 @@ html(lang='en')
                   .content
                     a.grey-text(href='#')
                       i.talk.outline.icon
-                      | Forum                
+                      | Forum
                 .item(style='padding:1em;')
                   .content
                   a.grey-text(href='#')
@@ -140,6 +140,16 @@ html(lang='en')
       $('#detail-pengajuan-judul').click(function(){
 
         $('.ui.modal.detail-pengajuan-judul')
+          .modal('show')
+          .modal({
+                  blurring: true,
+                  closable : true
+                })
+      })
+
+      $('#pengajuan-judul').click(function(){
+
+        $('.ui.modal.form-pengajuan-judul')
           .modal('show')
           .modal({
                   blurring: true,

@@ -20,6 +20,22 @@ exports.pengaturan_profil_ubah = function(req, res) {
     return res.render('anggota/dosen/pengaturan/profil_ubah', { title: 'Pengaturan Profil', copyright: copyright })
 }
 
+exports.judul = function(req, res) {
+    return res.render('anggota/dosen/judul/index', { title: 'Judul TA', copyright: copyright })
+}
+
+exports.judul_pengajuan = function(req, res) {
+    return res.render('anggota/dosen/judul/pengajuan', { title: 'Pengajuan Judul TA', copyright: copyright })
+}
+
+exports.judul_pengajuan_universitas = function(req, res) {
+    return res.render('anggota/dosen/judul/pengajuan_universitas', { title: 'Pengajuan Judul TA', copyright: copyright })
+}
+
+exports.judul_daftar = function(req, res) {
+    return res.render('anggota/dosen/judul/daftar', { title: 'Daftar Judul TA Anda', copyright: copyright })
+}
+
 exports.bimbingan = function(req, res) {
     return res.render('anggota/dosen/bimbingan/index', { title: 'Pilih judul TA', copyright: copyright })
 }
