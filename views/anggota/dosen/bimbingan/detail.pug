@@ -1,10 +1,10 @@
-extends templates/template1
+extends ../templates/template1
 
 block navigasi
-  a(class='item primary-color',href='/',style='color:#AB2531;')
+  a(class='item primary-color',href='/',style='color:#777777;')
     .text
       | Dashboard
-  a(class='item primary-color',href='/bimbingan',style='color:#777777;')
+  a(class='item primary-color',href='/bimbingan',style='color:#AB2531;')
     .text
       | Bimbingan
   .right.menu
@@ -24,12 +24,28 @@ block navigasi
 
 block main-middle
   .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
-    i.info.icon
-    | Informasi
+    i.comment.icon
+    | Bimbingan
   .ui.segment.grey-text
-    | info satu
+    form.ui.form
+      .field
+          textarea(rows='5', placeholder='Tuliskan bimbingan anda disini',style='resize:none;')
+
+      button.ui.button(type='submit') Submit
   .ui.segment.grey-text
-    | info dua
+    .ui.items
+      .item
+          .ui.tiny.image
+            img(src='/images/wireframe/image.png')
+
+          .content
+            a.header Username
+            .meta
+              span 1 menit yang lalu
+            .description
+              p
+            .extra
+              | Bimbingannya disini
 
 block right-middle
   .ui.card

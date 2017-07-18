@@ -1,10 +1,10 @@
-extends templates/template1
+extends ../templates/template1
 
 block navigasi
-  a(class='item primary-color',href='/',style='color:#AB2531;')
+  a(class='item primary-color',href='/',style='color:#777777;')
     .text
       | Dashboard
-  a(class='item primary-color',href='/bimbingan',style='color:#777777;')
+  a(class='item primary-color',href='/bimbingan',style='color:#AB2531;')
     .text
       | Bimbingan
   .right.menu
@@ -24,12 +24,15 @@ block navigasi
 
 block main-middle
   .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
-    i.info.icon
-    | Informasi
+    i.comment.icon
+    | Bimbingan
   .ui.segment.grey-text
-    | info satu
-  .ui.segment.grey-text
-    | info dua
+    | Pilih judul Tugas Akhir yang menjadikan anda pembimbing.
+    ol
+      li
+        a(href='/dosen/bimbingan/detail') Judul 1
+      li
+        a(href='/dosen/bimbingan/detail') Judul 2
 
 block right-middle
   .ui.card
