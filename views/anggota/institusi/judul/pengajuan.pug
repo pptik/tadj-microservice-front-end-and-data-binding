@@ -46,12 +46,12 @@ block main-middle
           tbody
             tr
               td 1
-              td BITS: Sistem Manajemen On-Street ParkingBITS: Sistem Manajemen On-Street ParkingBITS: Sistem Manajemen On-Street Parking
+              td BITS: Sistem Manajemen On-Street Parking
               td
-                a(href='#') Detail
+                a#detail-pengajuan-judul(href='#') Detail
                 br
                 br
-                a(href='#') Aksi
+                a#aksi-pengajuan-judul(href='#') Aksi
 
 block right-middle
   .ui.card
@@ -69,66 +69,39 @@ block right-middle
         | Pengaturan
 
 block modal
-  .ui.modal.tambah-institusi
-    i.close.icon
-    .header Tambah Institusi Pendidikan
-    .content
-      .ui.form
-        .field
-          label Institusi Pendidikan
-          select.ui.dropdown
-            option(value='') Pilih Institusi Pendidikan
-            option(value='1') Universitas Indonesia
-            option(value='0') Universitas Gajah Mada
-        .field
-          label Jenjang
-          select.ui.dropdown
-            option(value='') Pilih Jenjang
-            option(value='1') S1
-            option(value='0') S2
-        .field
-          label Prodi
-          select.ui.dropdown
-            option(value='') Pilih Prodi
-            option(value='1') Teknik Kelautan
-            option(value='0') Teknik Perminyakan
-        .field
-          label NIM
-          input(type='text', name='first-name', placeholder='Tuliskan NIM')
-        .field
-          label Foto KTM (Kartu Tanda Mahasiswa)
-          input(type='file', name='first-name')
-        .field
-          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim
 
-  .ui.modal.ubah-institusi
+  .ui.modal.aksi-pengajuan-judul
     i.close.icon
-    .header Ubah Data Institusi Pendidikan
+    .header Aksi
     .content
       .ui.form
         .field
-          label Institusi Pendidikan
-          select.ui.dropdown
-            option(value='') Pilih Institusi Pendidikan
-            option(value='1') Universitas Indonesia
-            option(value='0') Universitas Gajah Mada
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Terima Judul
+      br
+      .ui.form
         .field
-          label Jenjang
-          select.ui.dropdown
-            option(value='') Pilih Jenjang
-            option(value='1') S1
-            option(value='0') S2
-        .field
-          label Prodi
-          select.ui.dropdown
-            option(value='') Pilih Prodi
-            option(value='1') Teknik Kelautan
-            option(value='0') Teknik Perminyakan
-        .field
-          label NIM
-          input(type='text', name='first-name', placeholder='Tuliskan NIM')
-        .field
-          label Foto KTM (Kartu Tanda Mahasiswa)
-          input(type='file', name='first-name')
-        .field
-          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;') Tolak Judul
+
+
+  .ui.modal.detail-pengajuan-judul
+    i.close.icon
+    .header Detail
+    .content
+      table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+        thead
+          tr
+            th Judul TA
+            th Pengusul
+            th Tahun Ajaran
+            th Deskripsi TA
+            th Deskripsi Alat
+        tbody
+          tr
+            td BITS: Sistem Manajemen On-Street Parking
+            td
+              ol
+                li a
+                li b
+            td 2016/2017
+            td Deskripsi TA
+            td Deskripsi Alat
