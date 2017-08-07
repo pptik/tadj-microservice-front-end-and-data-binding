@@ -32,4 +32,7 @@ block content
         input(type='text', name='username', placeholder='Buat username Anda')
 
       .field
-        button.ui.button(type='button', style='color: white; background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);') Lanjutkan
+        button.ui.button(type='submit', style='color: white; background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);') Lanjutkan
+    if (messages.pesan)
+      .ui.red.message
+        span= messages.pesan

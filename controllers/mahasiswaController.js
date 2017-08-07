@@ -1,7 +1,14 @@
 const copyright = "© 2017 Tugas Akhir Dalam Jaringan PPTIK Institut Teknologi Bandung"
 
 exports.dashboard = function(req, res) {
+  var session = req.session
+  
+  if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
+    return res.redirect('/')
+  }else{
     return res.render('anggota/mahasiswa/dashboard', { title: 'Dashboard', copyright: copyright })
+  }
+
 }
 
 exports.pengaturan = function(req, res) {

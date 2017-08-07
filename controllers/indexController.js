@@ -56,6 +56,61 @@ exports.daftar_dosen = function(req, res) {
     return res.render('daftar/dosen', { title: 'Daftar Dosen', copyright: copyright })
 }
 
+exports.daftar_mahasiswa_proses = function(req, res) {
+    args = {
+      data: {
+        email: req.body.email,
+        username: req.body.username,
+        sandi: req.body.sandi
+      },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    };
+
+    rClient.post(base_api_general_url+'/daftar/proses/mahasiswa', args, function (data, response) {
+
+      if(data.success == true){
+
+          //Tampung hasil kembalian
+          var idPengguna = data.data.id_pengguna
+          var username = data.data.username
+          var peran = data.data.peran
+          var token = data.data.access_token
+
+          //Deklarasi session
+          var sess = req.session
+          sess.id_pengguna = idPengguna
+          sess.username = username
+          sess.peran = peran
+          sess.token = token
+
+          return res.redirect('/dashboard')
+      }else{
+          var pesan = ""
+
+          //Prosedur pengembalian error
+          async.series({
+              one: function(callback) {
+                for(var i=0;i<data.data.length;i++){
+                  pesan += data.data[i].msg+", "
+                }
+                callback(null, 1);
+              },
+              two: function(callback){
+                req.flash('pesan', pesan);
+                return res.redirect('/daftar/mahasiswa')
+
+                callback(null, 2);
+              }
+          }, function(err, results) {
+
+          })
+
+      }
+
+  });
+
+}
+
 exports.daftar_dosen_proses = function(req, res) {
     args = {
       data: {
@@ -97,7 +152,7 @@ exports.daftar_dosen_proses = function(req, res) {
               },
               two: function(callback){
                 req.flash('pesan', pesan);
-                return res.redirect('/daftar/guru')
+                return res.redirect('/daftar/dosen')
 
                 callback(null, 2);
               }
