@@ -1,7 +1,47 @@
 const copyright = "© 2017 Tugas Akhir Dalam Jaringan PPTIK Institut Teknologi Bandung"
+var base_api_general_url = "http://localhost:3001"
+var async = require('async')
+var restClient = require('node-rest-client').Client
+var rClient = new restClient()
 
 exports.index = function(req, res) {
     return res.render('index', { title: 'Tugas Akhir Dalam Jaringan', copyright: copyright })
+}
+
+exports.masuk = function(req, res) {
+
+  args = {
+  	data: { email: req.body.email,
+            sandi: req.body.sandi
+    },
+  	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+  };
+
+  rClient.post(base_api_general_url+'/masuk', args, function (data, response) {
+
+      if(data.success == true){
+
+          //Tampung hasil kembalian
+          var idPengguna = data.data.id_pengguna
+          var username = data.data.username
+          var peran = data.data.peran
+          var token = data.data.access_token
+
+          //Deklarasi session
+          var sess = req.session
+          sess.id_pengguna = idPengguna
+          sess.username = username
+          sess.peran = peran
+          sess.token = token
+
+
+          return res.redirect('/dashboard')
+      }else{
+          req.flash('pesan', data.data.message);
+          return res.redirect('/')
+      }
+    });
+
 }
 
 exports.daftar = function(req, res) {
@@ -14,6 +54,85 @@ exports.daftar_mahasiswa = function(req, res) {
 
 exports.daftar_dosen = function(req, res) {
     return res.render('daftar/dosen', { title: 'Daftar Dosen', copyright: copyright })
+}
+
+exports.daftar_dosen_proses = function(req, res) {
+    args = {
+      data: {
+        email: req.body.email,
+        username: req.body.username,
+        sandi: req.body.sandi
+      },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    };
+
+    rClient.post(base_api_general_url+'/daftar/proses/dosen', args, function (data, response) {
+
+      if(data.success == true){
+
+          //Tampung hasil kembalian
+          var idPengguna = data.data.id_pengguna
+          var username = data.data.username
+          var peran = data.data.peran
+          var token = data.data.access_token
+
+          //Deklarasi session
+          var sess = req.session
+          sess.id_pengguna = idPengguna
+          sess.username = username
+          sess.peran = peran
+          sess.token = token
+
+          return res.redirect('/dashboard')
+      }else{
+          var pesan = ""
+
+          //Prosedur pengembalian error
+          async.series({
+              one: function(callback) {
+                for(var i=0;i<data.data.length;i++){
+                  pesan += data.data[i].msg+", "
+                }
+                callback(null, 1);
+              },
+              two: function(callback){
+                req.flash('pesan', pesan);
+                return res.redirect('/daftar/guru')
+
+                callback(null, 2);
+              }
+          }, function(err, results) {
+
+          })
+
+      }
+
+  });
+
+}
+
+exports.keluar = function(req, res) {
+    var session = req.session
+
+    args = {
+    	data: { access_token: session.token
+      },
+    	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    };
+
+    rClient.post(base_api_general_url+'/keluar', args, function (data, response) {
+
+        if(data.success == true){
+            //Menghapus session
+            req.session.destroy()
+            return res.redirect('/')
+        }else{
+            req.flash('pesan', 'Gagal keluar');
+            return res.redirect('/dashboard')
+        }
+
+      });
+
 }
 
 exports.tentang = function(req, res) {

@@ -20,7 +20,7 @@ block content
   .eight.wide.column.grey-text
     h2.primary-color Daftar sebagai Dosen
     br
-    form.ui.form
+    form.ui.form(method='post',action='/public/daftar/dosen')
       .field
         div Email
         input(type='text', name='email', placeholder='Email Anda untuk login')
