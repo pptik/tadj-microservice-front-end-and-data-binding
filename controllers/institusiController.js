@@ -6,7 +6,7 @@ exports.dashboard = function(req, res) {
   if(session.peran == null || session.peran != 2){//Bukan sebagai institusi
     return res.redirect('/')
   }else{
-    return res.render('anggota/institusi/dashboard', { title: 'Dashboard', copyright: copyright })
+    return res.render('anggota/institusi/dashboard', { title: 'Dashboard', copyright: copyright, access_token: session.token, username:session.username, id_pengguna:session.id_pengguna })
   }
 
 }

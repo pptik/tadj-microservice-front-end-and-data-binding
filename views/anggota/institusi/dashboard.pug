@@ -14,11 +14,12 @@ block navigasi
     .text
       | Kelompok TA
   .right.menu
-    a(class='item grey-text',href='#')
-      i.alarm.outline.icon.medium.grey-text
+    //-
+      a(class='item grey-text',href='#')
+        i.alarm.outline.icon.medium.grey-text
     a.item.ui.dropdown
       .text.grey-text
-        | username
+        | {{username}}
       i.dropdown.icon
       .menu
         .item.nav-pengaturan
@@ -34,19 +35,17 @@ block main-middle
     | Informasi
   .ui.segment.grey-text
     | info satu
-  .ui.segment.grey-text
-    | info dua
 
 block right-middle
   .ui.card
     .image
-      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+      img(src='{{foto}}')
     .content
-      a.header username
+      a.header {{username}}
       .meta
-        span.date Nama Lengkap
+        span.date {{nama_lengkap}}
       .description
-        | Deskripsi
+        | {{bio}}
     .extra.content
       a(href='/pengaturan')
         i.setting.icon

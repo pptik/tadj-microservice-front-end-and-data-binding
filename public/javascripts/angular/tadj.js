@@ -1,4 +1,5 @@
 var angularModule = angular.module('tadjApp',[])
+var base_api_url = 'http://127.0.0.1:3001';
 
 angularModule.controller('controllerPanduan', function($scope){
   //Deklarasi
@@ -125,4 +126,44 @@ angularModule.controller('controllerPanduan', function($scope){
 
     $scope.univ_4 = true
   }
+})
+
+angularModule.controller('controllerGetProfile', function($scope, $http, $window){
+  var username = $('#hidden-username').text()
+  var access_token = $('#hidden-access-token').text()
+
+  //Request data profil
+  var reqProfil = {
+             method: 'POST',
+             url: base_api_url+'/profil',
+             headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             transformRequest: function(obj) {
+                  var str = [];
+                  for(var p in obj)
+                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                  return str.join("&");
+             },
+             data: {
+                     username: username,
+                     access_token: access_token
+                   }
+            }
+
+  $http(reqProfil).then(function(response){
+
+    console.log('data profil: '+JSON.stringify(response.data.data[0]))
+
+    $scope.username = response.data.data[0].profil.username
+    $scope.nama_lengkap = response.data.data[0].profil.nama_lengkap
+    $scope.foto = response.data.data[0].profil.foto_profil
+    $scope.bio = response.data.data[0].profil.bio
+
+
+  }, function(data){
+    console.log(data)
+  });
+
+
 })
