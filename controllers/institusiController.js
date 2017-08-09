@@ -36,15 +36,36 @@ exports.pengaturan_profil = function(req, res) {
 }
 
 exports.anggota = function(req, res) {
-    return res.render('anggota/institusi/anggota/index', { title: 'Anggota', copyright: copyright })
+
+  var session = req.session
+
+  if(session.peran == null || session.peran != 2){//Bukan sebagai institusi
+    return res.redirect('/')
+  }else{
+    return res.render('anggota/institusi/anggota/index', { title: 'Anggota', copyright: copyright, access_token: session.token, username:session.username, id_pengguna:session.id_pengguna })
+  }
+
 }
 
 exports.anggota_mahasiswa = function(req, res) {
-    return res.render('anggota/institusi/anggota/mahasiswa', { title: 'Anggota Mahasiswa', copyright: copyright })
+  var session = req.session
+
+  if(session.peran == null || session.peran != 2){//Bukan sebagai institusi
+    return res.redirect('/')
+  }else{
+    return res.render('anggota/institusi/anggota/mahasiswa', { title: 'Anggota Mahasiswa', copyright: copyright , access_token: session.token, username:session.username, id_pengguna:session.id_pengguna})
+  }
+
 }
 
 exports.anggota_dosen = function(req, res) {
-    return res.render('anggota/institusi/anggota/dosen', { title: 'Anggota Dosen', copyright: copyright })
+  var session = req.session
+
+  if(session.peran == null || session.peran != 2){//Bukan sebagai institusi
+    return res.redirect('/')
+  }else{
+    return res.render('anggota/institusi/anggota/dosen', { title: 'Anggota Dosen', copyright: copyright , access_token: session.token, username:session.username, id_pengguna:session.id_pengguna})
+  }
 }
 
 exports.kelompok = function(req, res) {

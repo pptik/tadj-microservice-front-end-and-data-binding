@@ -14,11 +14,12 @@ block navigasi
     .text
       | Kelompok TA
   .right.menu
-    a(class='item grey-text',href='#')
-      i.alarm.outline.icon.medium.grey-text
+    //.
+      a(class='item grey-text',href='#')
+        i.alarm.outline.icon.medium.grey-text
     a.item.ui.dropdown
       .text.grey-text
-        | username
+        | {{username}}
       i.dropdown.icon
       .menu
         .item.nav-pengaturan
@@ -38,47 +39,50 @@ block main-middle
     a.item(data-tab='second') Menunggu Konfirmasi
 
   .ui.bottom.attached.tab.segment.active(data-tab='first')
-    table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
       thead
         tr
-          th No
-          th Nama
-          th Username
-          th Kartu Tanda Mahasiswa
-      tbody
-        tr
-          td -
-          td -
-          td -
-          td -
+          th Email
+          th Nama Lengkap
+          th NIM
+          th Status Konfirmasi
 
+      tbody(ng-controller='controllerGetMahasiswaUniversitas')
+        tr(ng-repeat='student in students')
+          td {{student.email}}
+          td {{student.profil.nama_lengkap}}
+          td -
+          td -
 
   .ui.bottom.attached.tab.segment(data-tab='second')
-    table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
       thead
         tr
-          th No
-          th Nama
+          th Email
+          th NIM
           th Kartu Tanda Mahasiswa
           th Aksi
-      tbody
-        tr
+      tbody(ng-controller='controllerGetMahasiswaUniversitas')
+        tr(ng-repeat='pendingStudent in pendingStudents')
+          td {{pendingStudent.email}}
           td -
           td -
-          td -
-          td Terima|Tolak
+          td
+            a(href='#') Terima
+            |  atau
+            a(href='#')  Tolak
 
 
 block right-middle
   .ui.card
     .image
-      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+      img(src='{{foto}}')
     .content
-      a.header username
+      a.header {{username}}
       .meta
-        span.date Nama Lengkap
+        span.date {{nama_lengkap}}
       .description
-        | Deskripsi
+        | {{bio}}
     .extra.content
       a(href='/pengaturan')
         i.setting.icon

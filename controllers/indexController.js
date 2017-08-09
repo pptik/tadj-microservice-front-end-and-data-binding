@@ -3,6 +3,14 @@ var base_api_general_url = "http://localhost:3001"
 var async = require('async')
 var restClient = require('node-rest-client').Client
 var rClient = new restClient()
+// var rClient = new restClient({
+//   proxy:{
+//             host:"cache.itb.ac.id",
+//             port: 8080,
+//             user:"muhammadilhamfadillah",
+//             password:"31826113"
+//         }
+// });
 
 exports.index = function(req, res) {
     return res.render('index', { title: 'Tugas Akhir Dalam Jaringan', copyright: copyright })
@@ -37,6 +45,7 @@ exports.masuk = function(req, res) {
 
           return res.redirect('/dashboard')
       }else{
+          //req.flash('pesan', data.data.message);
           req.flash('pesan', data.data.message);
           return res.redirect('/')
       }

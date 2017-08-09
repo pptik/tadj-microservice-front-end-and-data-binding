@@ -14,11 +14,12 @@ block navigasi
     .text
       | Kelompok TA
   .right.menu
-    a(class='item grey-text',href='#')
-      i.alarm.outline.icon.medium.grey-text
+    //.
+      a(class='item grey-text',href='#')
+        i.alarm.outline.icon.medium.grey-text
     a.item.ui.dropdown
       .text.grey-text
-        | username
+        | {{username}}
       i.dropdown.icon
       .menu
         .item.nav-pengaturan
@@ -38,7 +39,7 @@ block main-middle
     a.item(data-tab='second') Menunggu Konfirmasi
 
   .ui.bottom.attached.tab.segment.active(data-tab='first')
-    table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;')
       thead
         tr
           th No
@@ -54,7 +55,7 @@ block main-middle
 
 
   .ui.bottom.attached.tab.segment(data-tab='second')
-    table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
       thead
         tr
           th No

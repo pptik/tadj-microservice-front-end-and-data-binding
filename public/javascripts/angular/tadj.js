@@ -167,3 +167,47 @@ angularModule.controller('controllerGetProfile', function($scope, $http, $window
 
 
 })
+
+angularModule.controller('controllerGetMahasiswaUniversitas', function($scope, $http, $window){
+  var idUniversitas = $('#hidden-user-id').text()
+  var access_token = $('#hidden-access-token').text()
+
+  //Request data mahasiswa
+  var reqMahasiswa = {
+             method: 'POST',
+             url: base_api_url+'/institusi/daftar_mahasiswa',
+             headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             transformRequest: function(obj) {
+                  var str = [];
+                  for(var p in obj)
+                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                  return str.join("&");
+             },
+             data: {
+                     idUniversitas: idUniversitas,
+                     access_token: access_token
+                   }
+            }
+
+  $http(reqMahasiswa).then(function(response){
+
+    console.log('data mahasiswa dari universitas: '+JSON.stringify(response.data.data))
+    //kembalian semuanya
+    $scope.students = response.data.data
+    $scope.email = response.data.data[0].email
+    $scope.nama_lengkap = response.data.data[0].profil.nama_lengkap
+
+    //$scope.pendingStudents = response.data.data
+
+
+
+
+
+  }, function(data){
+    console.log(data)
+  });
+
+
+})

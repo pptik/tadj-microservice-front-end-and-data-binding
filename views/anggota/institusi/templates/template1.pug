@@ -7,17 +7,20 @@ html(lang='en')
     link(rel='stylesheet', href='/stylesheets/custom-grid.css')
     link(rel='stylesheet', href='/stylesheets/slick.css')
     link(rel='stylesheet', href='/stylesheets/slick-theme.css')
+    link(rel='stylesheet', href='https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
     script(src='/javascripts/slick.min.js')
     script(src='/javascripts/angular.min.js')
     script(src='/javascripts/angular/tadj.js')
     script(src='/semanticUI/semantic.min.js')
+    script(src='https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js')
+
 
   body(ng-app='tadjApp',ng-controller='controllerGetProfile')
     #hidden-access-token(style='display:none') #{access_token}
     #hidden-username(style='display:none') #{username}
     #hidden-user-id(style='display:none') #{id_pengguna}
-    
+
     section.ui.container
       nav.ui.secondary.pointing.menu
         block navigasi
@@ -154,3 +157,5 @@ html(lang='en')
       })
 
       $('.menu .item').tab()
+
+      $('.data-table').DataTable()
