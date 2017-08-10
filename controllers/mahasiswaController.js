@@ -2,7 +2,7 @@ const copyright = "© 2017 Tugas Akhir Dalam Jaringan PPTIK Institut Teknologi B
 
 exports.dashboard = function(req, res) {
   var session = req.session
-  
+
   if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
     return res.redirect('/')
   }else{
@@ -28,7 +28,18 @@ exports.pengaturan_profil_ubah = function(req, res) {
 }
 
 exports.kelompok = function(req, res) {
-    return res.render('anggota/mahasiswa/kelompok/index', { title: 'Kelompok', copyright: copyright })
+
+    var session = req.session
+
+    if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
+      return res.redirect('/')
+    }else{
+      return res.render('anggota/mahasiswa/kelompok/index', { title: 'Kelompok', copyright: copyright, idPengguna: session.id_pengguna, accessToken: session.token})
+    }
+
+
+
+
 }
 
 exports.pilih_kelompok = function(req, res) {

@@ -27,15 +27,26 @@ block main-middle
     i.users.icon
     | Kelompok
   .ui.segment.grey-text
+    span#hidden-user-id(style='display:none;') #{idPengguna}
+    span#hidden-access-token(style='display:none;') #{accessToken}
+    span(ng-controller='controllerGetUniversitasMahasiswa')
+      span(ng-if='banyakUniversitas == 0')
+        | Anda belum terdaftar di suatu Institusi Pendidikan, silahkan klik 
+        a(href='#') disini
+        |  untuk mendaftar ke Institusi Pendidikan
+      span(ng-if='banyakUniversitas > 0')
+        | Daftar universitas
+
     //Kondisi ketika sudah memiliki kelompok
-    p Pilih Universitas
-      .ui.relaxed.divided.list
-          .item(style='padding:1em;')
-            .content
-              a(href='/mahasiswa/kelompok/pilih_kelompok') 1. Institut Teknologi Bandung
-          .item(style='padding:1em;')
-            .content
-              a(href='/mahasiswa/kelompok/pilih_kelompok')  2. Universitas Bandar Lampung
+    //.
+      p Pilih Universitas
+        .ui.relaxed.divided.list
+              .item(style='padding:1em;')
+                .content
+                  a(href='/mahasiswa/kelompok/pilih_kelompok') 1. Institut Teknologi Bandung
+              .item(style='padding:1em;')
+                .content
+                  a(href='/mahasiswa/kelompok/pilih_kelompok')  2. Universitas Bandar Lampung
 
 block right-middle
   .ui.card

@@ -42,29 +42,33 @@ block main-middle
     table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
       thead
         tr
+          th Jenjang
+          th Prodi
+          th NIM
           th Email
           th Nama Lengkap
-          th NIM
-          th Status Konfirmasi
+
 
       tbody(ng-controller='controllerGetMahasiswaUniversitas')
         tr(ng-repeat='student in students')
-          td {{student.email}}
-          td {{student.profil.nama_lengkap}}
-          td -
-          td -
+          td
+          td
+          td
+          td
+          td
 
   .ui.bottom.attached.tab.segment(data-tab='second')
     table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
       thead
         tr
-          th Email
+          th Jenjang
+          th Prodi
           th NIM
-          th Kartu Tanda Mahasiswa
-          th Aksi
+          th Email
+
       tbody(ng-controller='controllerGetMahasiswaUniversitas')
         tr(ng-repeat='pendingStudent in pendingStudents')
-          td {{pendingStudent.email}}
+          td -
           td -
           td -
           td

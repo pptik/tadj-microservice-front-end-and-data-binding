@@ -196,13 +196,87 @@ angularModule.controller('controllerGetMahasiswaUniversitas', function($scope, $
     console.log('data mahasiswa dari universitas: '+JSON.stringify(response.data.data))
     //kembalian semuanya
     $scope.students = response.data.data
-    $scope.email = response.data.data[0].email
-    $scope.nama_lengkap = response.data.data[0].profil.nama_lengkap
+    //$scope.universitas_prodi = response.data.data[0].email
 
-    //$scope.pendingStudents = response.data.data
-
+    $scope.pendingStudents = response.data.data
 
 
+
+
+
+
+  }, function(data){
+    console.log(data)
+  });
+
+
+})
+
+angularModule.controller('controllerGetMahasiswaPendingUniversitas', function($scope, $http, $window){
+  var idUniversitas = $('#hidden-user-id').text()
+  var access_token = $('#hidden-access-token').text()
+
+  //Request data mahasiswa
+  var reqMahasiswa = {
+             method: 'POST',
+             url: base_api_url+'/institusi/daftar_mahasiswa',
+             headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             transformRequest: function(obj) {
+                  var str = [];
+                  for(var p in obj)
+                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                  return str.join("&");
+             },
+             data: {
+                     idUniversitas: idUniversitas,
+                     access_token: access_token
+                   }
+            }
+
+  $http(reqMahasiswa).then(function(response){
+
+    console.log('data mahasiswa dari universitas: '+JSON.stringify(response.data.data))
+    //kembalian semuanya
+    $scope.students = response.data.data
+    //$scope.universitas_prodi = response.data.data[0].email
+
+    $scope.pendingStudents = response.data.data
+
+  }, function(data){
+    console.log(data)
+  });
+
+
+})
+
+angularModule.controller('controllerGetUniversitasMahasiswa', function($scope, $http, $window){
+  var idPengguna = $('#hidden-user-id').text()
+  var accessToken = $('#hidden-access-token').text()
+
+  //Request data mahasiswa
+  var reqMahasiswa = {
+             method: 'POST',
+             url: base_api_url+'/mahasiswa//daftar_universitas',
+             headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             transformRequest: function(obj) {
+                  var str = [];
+                  for(var p in obj)
+                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                  return str.join("&");
+             },
+             data: {
+                     idPengguna: idPengguna,
+                     accessToken: accessToken
+                   }
+            }
+
+  $http(reqMahasiswa).then(function(response){
+
+    $scope.banyakUniversitas = response.data.data[0].akademik.universitas_prodi.length
 
 
   }, function(data){
