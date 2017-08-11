@@ -16,7 +16,15 @@ exports.pengaturan = function(req, res) {
 }
 
 exports.pengaturan_akademik = function(req, res) {
+
+  var session = req.session
+
+  if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
+    return res.redirect('/')
+  }else{
     return res.render('anggota/mahasiswa/pengaturan/akademik', { title: 'Pengaturan Akademik', copyright: copyright })
+  }
+
 }
 
 exports.pengaturan_profil = function(req, res) {

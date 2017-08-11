@@ -31,9 +31,9 @@ block main-middle
     span#hidden-access-token(style='display:none;') #{accessToken}
     span(ng-controller='controllerGetUniversitasMahasiswa')
       span(ng-if='banyakUniversitas == 0')
-        | Anda belum terdaftar di suatu Institusi Pendidikan, silahkan klik 
-        a(href='#') disini
-        |  untuk mendaftar ke Institusi Pendidikan
+        | Anda belum terdaftar di suatu Institusi Pendidikan, silahkan klik &nbsp;
+        a(href='/mahasiswa/pengaturan/akademik') disini&nbsp;
+        |  untuk mendaftar ke Institusi Pendidikan.
       span(ng-if='banyakUniversitas > 0')
         | Daftar universitas
 
