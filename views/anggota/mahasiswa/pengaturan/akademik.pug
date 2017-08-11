@@ -23,6 +23,8 @@ block navigasi
           span.grey-text Keluar
 
 block main-middle
+  span#hidden-user-id(style='display:none;') #{idPengguna}
+  span#hidden-access-token(style='display:none;') #{accessToken}
   .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
     i.university.icon
     | Pengaturan Akademik
@@ -150,16 +152,14 @@ block modal
       .ui.form
         .field
           label Institusi Pendidikan
-          select.ui.dropdown
+          select.ui.dropdown(ng-controller='controllerGetUniversitas')
             option(value='') Pilih Institusi Pendidikan
-            option(value='1') Universitas Indonesia
-            option(value='0') Universitas Gajah Mada
+            option(value='{{university._id}}',ng-repeat='university in universities') {{university.profil.nama_lengkap}}
         .field
           label Jenjang
-          select.ui.dropdown
+          select.ui.dropdown(ng-controller='controllerGetJenjang')
             option(value='') Pilih Jenjang
-            option(value='1') S1
-            option(value='0') S2
+            option(value='{{jenjang._id}}',ng-repeat='jenjang in paraJenjang') {{jenjang.nama}}            
         .field
           label Prodi
           select.ui.dropdown

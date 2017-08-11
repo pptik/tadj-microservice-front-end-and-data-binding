@@ -6,7 +6,7 @@ exports.dashboard = function(req, res) {
   if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
     return res.redirect('/')
   }else{
-    return res.render('anggota/mahasiswa/dashboard', { title: 'Dashboard', copyright: copyright })
+    return res.render('anggota/mahasiswa/dashboard', { title: 'Dashboard', copyright: copyright, access_token: session.token, username:session.username, id_pengguna:session.id_pengguna })
   }
 
 }
@@ -22,7 +22,7 @@ exports.pengaturan_akademik = function(req, res) {
   if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
     return res.redirect('/')
   }else{
-    return res.render('anggota/mahasiswa/pengaturan/akademik', { title: 'Pengaturan Akademik', copyright: copyright })
+    return res.render('anggota/mahasiswa/pengaturan/akademik', { title: 'Pengaturan Akademik', copyright: copyright , idPengguna: session.id_pengguna, accessToken: session.token})
   }
 
 }
@@ -42,7 +42,7 @@ exports.kelompok = function(req, res) {
     if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
       return res.redirect('/')
     }else{
-      return res.render('anggota/mahasiswa/kelompok/index', { title: 'Kelompok', copyright: copyright, idPengguna: session.id_pengguna, accessToken: session.token})
+      return res.render('anggota/mahasiswa/kelompok/index', { title: 'Kelompok', copyright: copyright, access_token: session.token, username:session.username, id_pengguna:session.id_pengguna})
     }
 
 

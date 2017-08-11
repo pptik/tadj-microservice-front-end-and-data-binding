@@ -12,7 +12,10 @@ html(lang='en')
     script(src='/javascripts/angular.min.js')
     script(src='/javascripts/angular/tadj.js')
     script(src='/semanticUI/semantic.min.js')
-  body(ng-app='tadjApp')
+  body(ng-app='tadjApp',ng-controller='controllerGetProfile')
+    #hidden-access-token(style='display:none') #{access_token}
+    #hidden-username(style='display:none') #{username}
+    #hidden-user-id(style='display:none') #{id_pengguna}
     section.ui.container
       nav.ui.secondary.pointing.menu
         block navigasi

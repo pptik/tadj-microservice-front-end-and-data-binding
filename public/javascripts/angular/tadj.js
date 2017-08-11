@@ -285,3 +285,121 @@ angularModule.controller('controllerGetUniversitasMahasiswa', function($scope, $
 
 
 })
+
+angularModule.controller('controllerGetUniversitas', function($scope, $http, $window){
+  var access_token = $('#hidden-access-token').text()
+
+  //Request data universitas
+  var reqUniversitas = {
+             method: 'POST',
+             url: base_api_url+'/institusi/daftar',
+             headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             transformRequest: function(obj) {
+                  var str = [];
+                  for(var p in obj)
+                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                  return str.join("&");
+             },
+             data: {
+                     access_token: access_token
+                   }
+            }
+
+  $http(reqUniversitas).then(function(response){
+
+
+    //kembalian semuanya
+    $scope.universities = response.data.data
+    console.log('daftar universitas:'+response.data.data)
+
+
+
+
+
+
+
+
+  }, function(data){
+    console.log(data)
+  });
+
+
+})
+
+angularModule.controller('controllerGetJenjang', function($scope, $http, $window){
+  var access_token = $('#hidden-access-token').text()
+
+  //Request data jenjang
+  var reqJenjang = {
+             method: 'POST',
+             url: base_api_url+'/jenjang/daftar',
+             headers: {
+               'Content-Type': 'application/x-www-form-urlencoded'
+             },
+             transformRequest: function(obj) {
+                  var str = [];
+                  for(var p in obj)
+                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                  return str.join("&");
+             },
+             data: {
+                     access_token: access_token
+                   }
+            }
+
+  $http(reqJenjang).then(function(response){
+
+
+    //kembalian semuanya
+    $scope.paraJenjang = response.data.data
+    console.log('daftar jenjang:'+response.data.data)
+
+
+  }, function(data){
+    console.log(data)
+  });
+
+
+})
+
+// angularModule.controller('controllerGetJenjangProdi', function($scope, $http, $window){
+//   var access_token = $('#hidden-access-token').text()
+//
+//   $('select').on('change', function() {
+//       var idJenjang = $(this).val()
+//
+//       //Request data prodi
+//       var reqJenjangProdi = {
+//                  method: 'POST',
+//                  url: base_api_url+'/jenjang/daftar',
+//                  headers: {
+//                    'Content-Type': 'application/x-www-form-urlencoded'
+//                  },
+//                  transformRequest: function(obj) {
+//                       var str = [];
+//                       for(var p in obj)
+//                       str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+//                       return str.join("&");
+//                  },
+//                  data: {
+//                          access_token: access_token
+//                        }
+//                 }
+//
+//       $http(reqJenjangProdi).then(function(response){
+//
+//
+//         //kembalian semuanya
+//         $scope.paraJenjang = response.data.data
+//         console.log('daftar jenjang:'+response.data.data)
+//
+//
+//       }, function(data){
+//         console.log(data)
+//       });
+//
+//   }
+//
+// })
