@@ -315,46 +315,47 @@ angularModule.controller('controllerGetUniversitas', function($scope, $http, $wi
     console.log('daftar universitas:'+response.data.data)
 
 
+    //jenjang
+    $('#tambah-institusi-select-institusi').on('change', function() {
+
+      var idInstitusi = $(this).val()
+      var access_token = $('#hidden-access-token').text()
+
+      //Request data jenjang
+      var reqJenjang = {
+                 method: 'POST',
+                 url: base_api_url+'/jenjang/daftar',
+                 headers: {
+                   'Content-Type': 'application/x-www-form-urlencoded'
+                 },
+                 transformRequest: function(obj) {
+                      var str = [];
+                      for(var p in obj)
+                      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                      return str.join("&");
+                 },
+                 data: {
+                         access_token: access_token,
+                         id_universitas: idInstitusi
+                       }
+                }
+
+      $http(reqJenjang).then(function(response){
+
+
+        //kembalian semuanya
+        $scope.paraJenjang = response.data.data[0].akademik.jenjang
+        console.log('daftar jenjang:'+response.data.data)
+
+
+      }, function(data){
+        console.log(data)
+      });
+
+    });
 
 
 
-
-
-
-  }, function(data){
-    console.log(data)
-  });
-
-
-})
-
-angularModule.controller('controllerGetJenjang', function($scope, $http, $window){
-  var access_token = $('#hidden-access-token').text()
-
-  //Request data jenjang
-  var reqJenjang = {
-             method: 'POST',
-             url: base_api_url+'/jenjang/daftar',
-             headers: {
-               'Content-Type': 'application/x-www-form-urlencoded'
-             },
-             transformRequest: function(obj) {
-                  var str = [];
-                  for(var p in obj)
-                  str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                  return str.join("&");
-             },
-             data: {
-                     access_token: access_token
-                   }
-            }
-
-  $http(reqJenjang).then(function(response){
-
-
-    //kembalian semuanya
-    $scope.paraJenjang = response.data.data
-    console.log('daftar jenjang:'+response.data.data)
 
 
   }, function(data){
