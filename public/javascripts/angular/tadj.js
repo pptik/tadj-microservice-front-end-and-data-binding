@@ -314,7 +314,6 @@ angularModule.controller('controllerGetUniversitas', function($scope, $http, $wi
     $scope.universities = response.data.data
     console.log('daftar universitas:'+response.data.data)
 
-
     //jenjang
     $('#tambah-institusi-select-institusi').on('change', function() {
 
@@ -354,9 +353,44 @@ angularModule.controller('controllerGetUniversitas', function($scope, $http, $wi
 
     });
 
+    //prodi
+    $('#tambah-institusi-select-jenjang').on('change', function() {
+
+      var idJenjang = $(this).val()
+      var access_token = $('#hidden-access-token').text()
+
+      //Request data prodi
+      var reqProdi = {
+                 method: 'POST',
+                 url: base_api_url+'/jenjang/prodi',
+                 headers: {
+                   'Content-Type': 'application/x-www-form-urlencoded'
+                 },
+                 transformRequest: function(obj) {
+                      var str = [];
+                      for(var p in obj)
+                      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                      return str.join("&");
+                 },
+                 data: {
+                         access_token: access_token,
+                         id_jenjang: idJenjang
+                       }
+                }
+
+      $http(reqProdi).then(function(response){
 
 
+        //kembalian semuanya
+        $scope.paraProdi = response.data.data[0].prodi
+        //console.log('daftar jenjang:'+response.data.data)
 
+
+      }, function(data){
+        console.log(data)
+      });
+
+    });
 
   }, function(data){
     console.log(data)

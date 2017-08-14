@@ -149,7 +149,7 @@ block modal
     i.close.icon
     .header Tambah Institusi Pendidikan
     .content
-      .ui.form(ng-controller='controllerGetUniversitas')
+      form.ui.form(ng-controller='controllerGetUniversitas',enctype='multipart/form-data',method='post',action='/pengaturan/tambah_institusi_pendidikan')
         .field
           label Institusi Pendidikan
           select.ui.dropdown#tambah-institusi-select-institusi
@@ -164,7 +164,7 @@ block modal
           label Prodi
           select.ui.dropdown#tambah-institusi-select-prodi
             option(value='') Pilih Prodi
-            option(value='{{jenjang._id}}',ng-repeat='jenjang in paraJenjang') {{jenjang.nama}}
+            option(value='{{prodi._id}}',ng-repeat='prodi in paraProdi') {{prodi.nama}}
 
         .field
           label NIM

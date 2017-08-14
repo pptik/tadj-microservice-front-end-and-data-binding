@@ -1,5 +1,21 @@
 const copyright = "© 2017 Tugas Akhir Dalam Jaringan PPTIK Institut Teknologi Bandung"
 
+//Import Library yang diperlukan
+var restClient = require('node-rest-client').Client;
+var rClient = new restClient();
+var Client = require('ftp')
+var client = new Client()
+var path = require('path')
+var multer = require('multer')
+var FTP = require('ftp')
+var fs = require('fs')
+
+var connectionProperties = {
+    host: "",
+    user: "",
+    password: ""
+};
+
 exports.dashboard = function(req, res) {
   var session = req.session
 
@@ -26,6 +42,21 @@ exports.pengaturan_akademik = function(req, res) {
   }
 
 }
+
+
+exports.tambah_institusi_pendidikan = function(req, res) {
+
+  var session = req.session
+
+  if(session.peran == null || session.peran != 4){//Bukan sebagai mahasiswa
+    return res.redirect('/')
+  }else{
+
+    return res.render('anggota/mahasiswa/pengaturan/akademik', { title: 'Pengaturan Akademik', copyright: copyright, access_token: session.token, username:session.username, id_pengguna:session.id_pengguna})
+  }
+
+}
+
 
 exports.pengaturan_profil = function(req, res) {
     return res.render('anggota/mahasiswa/pengaturan/profil', { title: 'Pengaturan Profil', copyright: copyright })
