@@ -1,0 +1,86 @@
+extends ../templates/template1
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    .text
+      | Dashboard
+  a(class='item primary-color',href='/institusi/anggota',style='color:#AB2531;')
+    .text
+      | Anggota
+  a(class='item primary-color',href='/institusi/judul',style='color:#777777;')
+    .text
+      | Judul TA
+  a(class='item primary-color',href='/institusi/kelompok',style='color:#777777;')
+    .text
+      | Kelompok TA
+  .right.menu
+    //.
+      a(class='item grey-text',href='#')
+        i.alarm.outline.icon.medium.grey-text
+    a.item.ui.dropdown
+      .text.grey-text
+        | {{username}}
+      i.dropdown.icon
+      .menu
+        .item.nav-pengaturan
+          i.setting.icon.grey-text
+          span.grey-text Pengaturan
+        .item.nav-keluar
+          i.sign.out.icon.grey-text
+          span.grey-text Keluar
+
+block main-middle
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.users.icon
+    | Dosen
+
+  .ui.top.attached.tabular.menu
+    a.item.active(data-tab='first') Daftar Semua Dosen
+    a.item(data-tab='second') Menunggu Konfirmasi
+
+  .ui.bottom.attached.tab.segment.active(data-tab='first')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+      thead
+        tr
+          th No
+          th Nama
+          th Username
+          th Kartu Tanda Pengajar
+      tbody
+        tr
+          td -
+          td -
+          td -
+          td -
+
+
+  .ui.bottom.attached.tab.segment(data-tab='second')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
+      thead
+        tr
+          th No
+          th Nama
+          th Kartu Tanda Pengajar
+          th Aksi
+      tbody
+        tr
+          td -
+          td -
+          td -
+          td Terima|Tolak
+
+
+block right-middle
+  .ui.card
+    .image
+      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+    .content
+      a.header username
+      .meta
+        span.date Nama Lengkap
+      .description
+        | Deskripsi
+    .extra.content
+      a(href='/pengaturan')
+        i.setting.icon
+        | Pengaturan

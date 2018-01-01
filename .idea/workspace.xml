@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ff6e6979-af66-4148-95eb-a896103d771c" name="Default" comment="restrukur project">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/www" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/controllers/dosenController.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/controllers/indexController.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/controllers/institusiController.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/controllers/mahasiswaController.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/global.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/images/carousel-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/images/carousel-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/images/carousel-3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo-tadj.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/images/shortcut-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/angular.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/angular/dashboard.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/angular/tadj.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/custom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/require.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/javascripts/slick.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/accordion.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/accordion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/accordion.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/accordion.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/ad.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/ad.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/api.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/api.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/breadcrumb.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/breadcrumb.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/button.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/button.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/card.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/card.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/checkbox.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/checkbox.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/checkbox.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/checkbox.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/colorize.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/colorize.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/comment.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/comment.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/container.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/container.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dimmer.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dimmer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dimmer.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dimmer.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/divider.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/divider.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dropdown.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dropdown.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dropdown.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/dropdown.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/embed.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/embed.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/embed.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/embed.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/feed.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/feed.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/flag.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/flag.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/form.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/form.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/form.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/form.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/header.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/header.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/icon.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/icon.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/image.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/image.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/input.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/input.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/item.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/item.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/label.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/label.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/list.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/list.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/loader.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/loader.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/menu.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/menu.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/message.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/message.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/modal.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/modal.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/modal.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/modal.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/nag.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/nag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/nag.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/nag.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/popup.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/popup.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/popup.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/popup.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/progress.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/progress.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/progress.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/progress.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/rail.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/rail.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/rating.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/rating.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/rating.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/rating.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/reset.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/reveal.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/reveal.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/search.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/search.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/search.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/search.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/segment.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/segment.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/shape.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/shape.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/shape.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/shape.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sidebar.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sidebar.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sidebar.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sidebar.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/site.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/site.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/site.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/site.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/state.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/state.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/statistic.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/statistic.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/step.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/step.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sticky.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sticky.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sticky.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/sticky.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/tab.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/tab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/tab.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/tab.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/table.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/table.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/transition.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/transition.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/transition.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/transition.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/video.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/video.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/video.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/video.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/visibility.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/visibility.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/visit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/components/visit.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/semantic.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/semantic.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/semantic.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/semantic.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/basic/assets/fonts/icons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/basic/assets/fonts/icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/basic/assets/fonts/icons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/basic/assets/fonts/icons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/fonts/icons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/fonts/icons.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/fonts/icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/fonts/icons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/fonts/icons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/fonts/icons.woff2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/default/assets/images/flags.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/github/assets/fonts/octicons-local.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/github/assets/fonts/octicons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/github/assets/fonts/octicons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/github/assets/fonts/octicons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/material/assets/fonts/icons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/material/assets/fonts/icons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/material/assets/fonts/icons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/semanticUI/themes/material/assets/fonts/icons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/custom-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/custom.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/slick-theme.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/slick.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/bimbingan/detail.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/bimbingan/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/dashboard.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/judul/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/judul/pengajuan.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/judul/pengajuan_universitas.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/pengaturan/akademik.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/pengaturan/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/pengaturan/profil.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/pengaturan/profil_ubah.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/templates/public_template.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/dosen/templates/template1.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/anggota/dosen.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/anggota/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/anggota/mahasiswa.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/dashboard.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/judul/daftar.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/judul/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/judul/pengajuan.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/kelompok/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/pengaturan/akademik.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/pengaturan/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/pengaturan/profil.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/pengaturan/profil_ubah.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/templates/public_template.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/institusi/templates/template1.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/dashboard.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/ambil_judul.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/bagikan.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/bimbingan.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/detail.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/pilih_kelompok.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/postervideo.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/kelompok/tambah.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/pengaturan/akademik.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/pengaturan/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/pengaturan/profil.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/pengaturan/profil_ubah.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/templates/public_template.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/anggota/mahasiswa/templates/template1.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/daftar/dosen.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/daftar/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/daftar/mahasiswa.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/error.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/index.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/lihat_judul.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/dosen/1.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/dosen/2.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/dosen/3.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/dosen/4.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/dosen/5.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/mahasiswa/1.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/mahasiswa/2.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/mahasiswa/3.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/mahasiswa/4.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/mahasiswa/5.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/univ/1.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/univ/2.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/univ/3.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/panduan/univ/4.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/public_profil.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/templates/public-lihat-judul.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/templates/public-panduan.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/templates/public-profil.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/templates/public-putih.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/templates/public.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/tentang.pug" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/views/tidakditemukan.pug" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dosenController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/dosenController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/indexController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="44" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mahasiswaController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/mahasiswaController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="86" lean-forward="false" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="institusiController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/institusiController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/global.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>copyright</find>
+      <find>copyright: copyright</find>
+      <find>base_api_url</find>
+      <find>rclient</find>
+      <find>general</find>
+      <find>globalVariable.copyright }</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>copyright: globalVariable.copyright</replace>
+      <replace>globalVariable.copyright</replace>
+      <replace>globalVariable.</replace>
+      <replace>globalVariable.general_url</replace>
+      <replace>copyright: globalVariable.copyright }</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="emilhamep &lt;emilhamep@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/controllers/indexController.js" />
+        <option value="$PROJECT_DIR$/controllers/dosenController.js" />
+        <option value="$PROJECT_DIR$/global.json" />
+        <option value="$PROJECT_DIR$/controllers/mahasiswaController.js" />
+        <option value="$PROJECT_DIR$/controllers/institusiController.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1266" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tadj-layer-3-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tadj-layer-3-4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tadj-layer-3-4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tadj-layer-3-4" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ff6e6979-af66-4148-95eb-a896103d771c" name="Default" comment="" />
+      <created>1514814660200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514814660200</updated>
+      <workItem from="1514814662475" duration="1777000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1777000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1229" height="777" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/global.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/dosenController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/mahasiswaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="86" lean-forward="false" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/indexController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/institusiController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="62" column="11" lean-forward="false" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

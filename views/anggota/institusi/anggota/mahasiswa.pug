@@ -1,0 +1,99 @@
+extends ../templates/template1
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    .text
+      | Dashboard
+  a(class='item primary-color',href='/institusi/anggota',style='color:#AB2531;')
+    .text
+      | Anggota
+  a(class='item primary-color',href='/institusi/judul',style='color:#777777;')
+    .text
+      | Judul TA
+  a(class='item primary-color',href='/institusi/kelompok',style='color:#777777;')
+    .text
+      | Kelompok TA
+  .right.menu
+    //.
+      a(class='item grey-text',href='#')
+        i.alarm.outline.icon.medium.grey-text
+    a.item.ui.dropdown
+      .text.grey-text
+        | {{username}}
+      i.dropdown.icon
+      .menu
+        .item.nav-pengaturan
+          i.setting.icon.grey-text
+          span.grey-text Pengaturan
+        .item.nav-keluar
+          i.sign.out.icon.grey-text
+          span.grey-text Keluar
+
+block main-middle
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.users.icon
+    | Mahasiswa
+
+  .ui.top.attached.tabular.menu
+    a.item.active(data-tab='first') Daftar Semua Mahasiswa &#40;Sudah dikonfirmasi&#41;
+    a.item(data-tab='second') Menunggu Konfirmasi
+
+  .ui.bottom.attached.tab.segment.active(data-tab='first')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
+      thead
+        tr
+          th Jenjang
+          th Prodi
+          th NIM
+          th Email
+          th Nama Lengkap
+
+
+      tbody(ng-controller='controllerGetMahasiswaUniversitas')
+        tr(ng-repeat='student in students')
+          td
+          td
+          td
+          td
+          td
+
+  .ui.bottom.attached.tab.segment(data-tab='second')
+    table.data-table.ui.very.basic.collapsing.celled.table(style='width:100%;padding:1em;')
+      thead
+        tr
+          th Jenjang
+          th Prodi
+          th NIM
+          th Email
+          th KTM
+          th Aksi
+
+      tbody(ng-controller='controllerGetMahasiswaUniversitas')
+        tr(ng-repeat='pendingStudent in pendingStudents')
+          td {{pendingStudent.akademik.universitas_prodi.jenjang}}
+          td {{pendingStudent.akademik.universitas_prodi.prodi}}
+          td {{pendingStudent.akademik.universitas_prodi.nim_nip}}
+          td {{pendingStudent.email}}
+          td
+            a(href='{{pendingStudent.email}}')
+              | {{pendingStudent.akademik.universitas_prodi.prodi}}
+          td
+            a(href='#') Terima
+            |  atau
+            a(href='#')  Tolak
+
+
+block right-middle
+  .ui.card
+    .image
+      img(src='{{foto}}')
+    .content
+      a.header {{username}}
+      .meta
+        span.date {{nama_lengkap}}
+      .description
+        | {{bio}}
+    .extra.content
+      a(href='/pengaturan')
+        i.setting.icon
+        | Pengaturan

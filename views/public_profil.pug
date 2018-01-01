@@ -1,0 +1,65 @@
+extends templates/public-profil
+
+
+
+block main-middle
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.user.icon
+    | Profil
+  .ui.segment.grey-text
+    .ui.grid(style='padding:1em;')
+      .ui.relaxed.list
+        .item
+          i.mail.icon
+          .content
+            a.grey-text Email
+            .description me@email.com
+        .item
+          i.child.icon
+          .content
+            a.grey-text Username
+            .description emilhamep
+        .item
+          i.user.icon
+          .content
+            a.grey-text Nama Depan
+            .description John
+        .item
+          i.user.icon
+          .content
+            a.grey-text Nama Belakang
+            .description Doe
+        .item
+          i.university.icon
+          .content
+            a.grey-text Institusi Pendidikan
+            .description
+              .ui.relaxed.list
+                .item
+                  a(href='#') IP 1
+                .item
+                  a(href='#') IP 2
+
+
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.group.icon
+    | Kelompok Tugas Akhir
+  .ui.segment.grey-text
+    .ui.grid(style='padding:1em;')
+      .ui.relaxed.list
+        .item
+          a(href='/kelompok/ta0000000',target='_blank') TA0000001
+        .item
+          a(href='/kelompok/ta0000000',target='_blank') TA0000002
+
+
+block right-middle
+  .ui.card
+    .image
+      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+    .content
+      a.header username
+      .meta
+        span.date Nama Lengkap
+      .description
+        | Deskripsi

@@ -1,0 +1,96 @@
+extends ../templates/template1
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    .text
+      | Dashboard
+  a(class='item primary-color',href='/institusi/anggota',style='color:#777777;')
+    .text
+      | Anggota
+  a(class='item primary-color',href='/institusi/judul',style='color:#777777;')
+    .text
+      | Judul TA
+  a(class='item primary-color',href='/institusi/kelompok',style='color:#AB2531;')
+    .text
+      | Kelompok TA
+  .right.menu
+    a(class='item grey-text',href='#')
+      i.alarm.outline.icon.medium.grey-text
+    a.item.ui.dropdown
+      .text.grey-text
+        | username
+      i.dropdown.icon
+      .menu
+        .item.nav-pengaturan
+          i.setting.icon.grey-text
+          span.grey-text Pengaturan
+        .item.nav-keluar
+          i.sign.out.icon.grey-text
+          span.grey-text Keluar
+
+block main-middle
+  .ui.segment.grey-text(align='center',style='background: linear-gradient(141deg, #e74c3c 10%, #c0392b 51%, #c0392b 75%);color:#FFFFFF;')
+    i.users.icon
+    | Kelompok
+  .ui.segment.grey-text
+    br
+    .ui.grid(style='padding:0 1em 1em 1em;')
+      .sixteen.wide.column
+        a#tambah-kelompok-institusi.ui.button(style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;')
+          i.icon.write
+          | Tambah Kelompok
+        br
+        br
+        table.ui.very.basic.collapsing.celled.table(style='width:100%;')
+          thead
+            tr
+              th No
+              th Kelompok
+              th Kuota
+              th Judul TA
+          tbody
+            tr
+              td -
+              td -
+              td -
+              td -
+
+block right-middle
+  .ui.card
+    .image
+      img(src='https://semantic-ui.com/images/avatar2/large/kristy.png')
+    .content
+      a.header username
+      .meta
+        span.date Nama Lengkap
+      .description
+        | Deskripsi
+    .extra.content
+      a(href='/pengaturan')
+        i.setting.icon
+        | Pengaturan
+
+block modal
+  .ui.modal.tambah-kelompok
+    i.close.icon
+    .header Tambah Kelompok
+    .content
+      .ui.form
+        .field
+          label Prodi
+          select.ui.dropdown
+            option(value='-') Prodi
+        .field
+          label Tahun Ajaran
+          select.ui.dropdown
+            option(value='-') Pilih Tahun Ajaran
+        .field
+          label Semester
+          select.ui.dropdown
+            option(value='') Pilih Semester
+        .field
+          label Kuota
+          select.ui.dropdown
+            option(value='') Pilih Kuota
+        .field
+          button.ui.button(type='submit',style='background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);color:#FFFFFF;') Kirim

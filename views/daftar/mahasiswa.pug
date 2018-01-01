@@ -1,0 +1,38 @@
+extends ../templates/public-putih
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    | Halaman Awal
+  a(class='item primary-color',href='/lihat_judul',style='color:#777777;')
+      | Lihat Judul
+  .right.menu
+    a(class='item grey-text',href='/tentang')
+      aside(class='grey-text') Tentang
+    //-
+      a(class='item grey-text',href='/panduan')
+        aside(class='grey-text') Panduan
+    a(class='item grey-text',href='/daftar')
+      aside(class='primary-color') Daftar
+
+block content
+  .eight.wide.column.grey-text
+    h2.primary-color Daftar sebagai Mahasiswa
+    br
+    form.ui.form(method='post',action='/public/daftar/mahasiswa')
+      .field
+        div Email
+        input(type='text', name='email', placeholder='Email Anda untuk login')
+      .field
+        div Sandi
+        input(type='password', name='sandi', placeholder='Sandi Anda untuk login')
+      .field
+        div Username
+        input(type='text', name='username', placeholder='Buat username Anda')
+      if (messages.pesan)
+        .ui.red.message
+          span= messages.pesan
+
+
+      button.ui.button(type='submit', style='color: white; background: linear-gradient(141deg, #2ecc71 10%, #27ae60 51%, #27ae60 75%);') Lanjutkan
+  .eight.wide.column.grey-text
+    | Foto Pengguna Mahasiswa

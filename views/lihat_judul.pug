@@ -1,0 +1,83 @@
+extends templates/public-lihat-judul
+
+block navigasi
+  a(class='item primary-color',href='/',style='color:#777777;')
+    | Halaman Awal
+  a(class='item primary-color',href='/lihat_judul',style='color:#AB2531;')
+      | Lihat Judul
+  .right.menu
+    a(class='item grey-text',href='/tentang')
+      aside(class='grey-text') Tentang
+    //-
+      a(class='item grey-text',href='/panduan')
+        aside(class='grey-text') Panduan
+    a(class='item grey-text',href='/daftar')
+      aside(class='grey-text') Daftar
+
+block form-pencarian
+  .sixteen.wide.column
+    h2.primary-color Pencarian Judul
+    .ui.form
+      .fields
+        .sixteen.wide.field
+          .ui.left.icon.input
+            input(type='text', placeholder='Tuliskan Judul Tugas Akhir yang Anda cari',style='width:100%;')
+            i.search.icon
+      .ui.accordion
+        .title
+          i.dropdown.icon.blue-text
+          span.blue-text Lakukan pencarian secara detail
+        .content
+          .fields
+            .eight.wide.field
+              div Institusi Pendidikan
+              select.ui.dropdown(name='universitas')
+                option(value='') Pilih asal Tugas Akhir Institusi Pendidikan
+            .eight.wide.field
+              div Jenjang
+              select.ui.dropdown(name='jenjang')
+                option(value='') Pilih jenjang
+          .fields
+            .eight.wide.field
+              div Prodi
+              select.ui.dropdown(name='universitas')
+                option(value='') Pilih prodi Tugas Akhir
+            .eight.wide.field
+              div Tahun Ajaran
+              select.ui.dropdown(name='tahun_ajaran')
+                option(value='') Pilih tahun ajaran Tugas Akhir
+          .fields
+            .eight.wide.field
+              div Semester
+              select.ui.dropdown(name='semester')
+                option(value='') Pilih semester
+            .eight.wide.field
+              div Dosen pengusul judul
+              select.ui.dropdown(name='dosen_pengusul')
+                option(value='') Pilih Dosen pengusul judul
+          .fields
+            .eight.wide.field
+              button(type='submit',class='large ui button button-submit',style='background: linear-gradient(to bottom, rgba(73,155,234,1) 0%, rgba(6,77,153,1) 100%);color:#FFFFFF;') Mulai Cari
+
+block daftar-judul
+  .ui.styled.fluid.accordion
+    .title
+      i.dropdown.icon
+      |     What is a dog?
+    .content
+      p.transition.visible(style='display: block !important;')
+        | A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+    .title
+      i.dropdown.icon
+      |     What kinds of dogs are there?
+    .content
+      p.transition.hidden
+        | There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+    .title
+      i.dropdown.icon
+      |     How do you acquire a dog?
+    .content
+      p
+        | Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+      p
+        | A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
